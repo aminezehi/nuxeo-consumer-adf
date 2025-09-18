@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="14.1.2.2.22" id="DataControls"
+                    Package="model">
+  <AdapterDataControl id="NuxeoDataControl" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.url.URLDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false" Definition="model.NuxeoDataControl"
+                      BeanClass="model.NuxeoDataControl" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <Definitions>
+        <Definition xmlns="http://xmlns.oracle.com/adfm/adapter/url/xml" ConnectionName="NuxeoAPIConnection" Source=""
+                    HttpMethod="GET" id="loadData" ImplDef="oracle.adfinternal.model.adapter.url.xml.XMLDCDef"
+                    SchemaLocation="NuxeoDataControlloadDataSchema.xsd" UsePersistedStructure="false"
+                    ensureKeyAttribute="true" RootElement="html"/>
+      </Definitions>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

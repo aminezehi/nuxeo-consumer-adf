@@ -1,0 +1,12 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="NuxeoAPIConnection" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="NuxeoAPIConnection">
+        <Contents>
+          <urlconnection name="NuxeoAPIConnection" url="http://localhost:7001/nuxeo-api/"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

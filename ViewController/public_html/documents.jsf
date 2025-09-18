@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Documents Nuxeo">
+            <af:form>
+                <af:panelGroupLayout layout="vertical">
+                    <af:outputText value="Documents Nuxeo" styleClass="AFHeaderText"/>
+                    
+                    <af:table value="#{documentsBean.documents}" 
+                             var="doc" 
+                             rows="10">
+                        <af:column headerText="UID">
+                            <af:outputText value="#{doc.uid}"/>
+                        </af:column>
+                        <af:column headerText="Titre">
+                            <af:outputText value="#{doc.title}"/>
+                        </af:column>
+                        <af:column headerText="Type">
+                            <af:outputText value="#{doc.type}"/>
+                        </af:column>
+                        <af:column headerText="Chemin">
+                            <af:outputText value="#{doc.path}"/>
+                        </af:column>
+                    </af:table>
+                </af:panelGroupLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

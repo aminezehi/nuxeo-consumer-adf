@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document title="Uploader vers Nuxeo">
+      <af:form usesUpload="true">
+        <af:panelGroupLayout layout="vertical">
+          <af:outputText value="Uploader un document" styleClass="AFHeaderText"/>
+          <af:inputFile label="Choisir un fichier"
+                        value="#{uploadBean.file}"
+                        autoSubmit="true"/>
+          <af:commandButton text="Envoyer"
+                            actionListener="#{uploadBean.upload}"
+                            partialSubmit="false"/>
+          <af:outputText value="#{uploadBean.message}" inlineStyle="color:#1B5E20;"
+                         rendered="#{not empty uploadBean.message}"/>
+          <af:outputText value="#{uploadBean.error}" inlineStyle="color:#B71C1C;"
+                         rendered="#{not empty uploadBean.error}"/>
+        </af:panelGroupLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

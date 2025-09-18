@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE PDefViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<PDefViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="NuxeoDataControl"
+  Version="14.1.2.2.22">
+  <DesignTime>
+    <Attr Name="_DCName" Value="model.DataControls.NuxeoDataControl"/>
+    <Attr Name="_SDName" Value="model.NuxeoDataControl"/>
+  </DesignTime>
+</PDefViewObject>

@@ -1,0 +1,33 @@
+﻿# JDeveloper / ADF
+*.data
+*.dat
+*.tmp
+*.bak
+*.class
+*.log
+*.ear
+*.jar
+*.war
+
+# Build/servers
+classes/
+target/
+deploy/
+servers/
+o.j2ee/
+DefaultDomain/
+**/temp/
+**/tmp/
+
+# IDE metadata
+*.jpx
+*.jpr#
+*.jws#
+*.history/
+.DC/
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
